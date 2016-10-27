@@ -1,0 +1,17 @@
+<?php
+$data = json_decode(file_get_contents("php://input"));
+$fname = mysql_real_escape_string($data->fname);
+$lname = mysql_real_escape_string($data->lname);
+
+mysql_connect("localhost","root","");
+mysql_select_db("mis");
+mysql_query("INSERT INTO login('fname','lname')VALUES('".$fname."','".$lname."')")
+/*$db_connection = pg_connect("host=localhost dbname=misapp user=postgres password="");
+$dbconn3 = pg_connect("host=localhost port=9090 dbname=misapp user=postgres password=master94");
+
+pg_query($dbconn3, "INSERT INTO signup VALUES('$fname','$lname');
+/* var_dump($result);
+pg_close($dbconn3);*/
+
+
+?>

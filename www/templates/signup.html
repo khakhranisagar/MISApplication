@@ -1,0 +1,59 @@
+<ion-modal-view>
+  <ion-header-bar>
+    <h1 class="title">SignUp</h1>
+    <div class="buttons">
+      <button class="button button-clear button-assertive" ng-click="closeSignup()"> Cancel </button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+    <form ng-submit="doSignup()">
+      
+      <div class="list">
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">First Name</span>
+    <input type="text" placeholder="John" ng-model="signupData.firstname">
+  </label>
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Last Name</span>
+    <input type="text" placeholder="Doe" ng-model="signupData.lastname">
+  </label>
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Email</span>
+    <input type="text" placeholder="john@nirmmauni.ac.in" ng-model="signupData.email">
+  </label>
+ <label class="item item-input item-stacked-label">
+    <span class="input-label">Contact Number</span>
+    <input type="text" placeholder="1234567890" ng-model="signupData.contact">
+  </label>
+ <label class="item item-input item-select">
+    <div class="input-label">
+      Department
+    </div>
+    <select ng-model="signupData.dept" ng-change="getDepartment(signupData.dept)">
+      <option>Institute Of Management</option>
+      <option selected>Institute Of Technology</option>
+      <option>Institute Of Law</option>
+<option>Institute Of Pharmacy</option>
+<option>Institute Of Science</option>
+<option>Institute Of Architecture</option>
+
+    </select>
+  </label>
+
+ <label class="item item-input item-stacked-label">
+    <span class="input-label">Your New Password</span>
+    <input type="password" placeholder="1234567890" ng-model="signupData.password">
+  </label>
+
+</div>
+
+
+
+
+        <label class="item">
+          <button class="button button-block button-positive" type="submit" ng-click="createAccount()">Sign Up</button>
+        </label>
+      </div>
+    </form>
+  </ion-content>
+</ion-modal-view>

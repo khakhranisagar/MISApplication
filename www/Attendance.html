@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html ng-app="newApp">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <script src="lib/ionic/js/angular/angular.min.js"></script>
+    <script src="js/attend.js"></script>
+      <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    <script src="lib/ionic/js/angular/Aangular.min.js"></script>
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+  </head>
+ <body ng-controller="MainCtrl as main">
+  <ion-header-bar class="bar-positive">
+
+  <button class="button button-outline button-light" ng-click="mygoBack()"><i class="ion-arrow-left-c"></i> Back</button>
+      <h1 class="title">Attendance</h1>
+   <button class="button icon ion-home" ng-href="/index.html"></button>
+
+      </ion-header-bar>
+
+   
+
+
+
+  <ion-content class="has-header">
+ <!--   <ion-list>
+      <ion-item collection-repeat="item in main.items">
+        {{item}}
+      </ion-item>
+    </ion-list> 
+-->
+
+
+<button class="button button-positive button-outline" ng-click="showPopup()">
+   View Attendance
+</button>
+<button class="button button-positive button-outline" ng-click="toggle()">
+   Post Attendance
+</button>
+
+<button class="button button-positive button-outline">
+   Attendance Stats
+</button>
+
+
+
+<div ng-show="myVar">
+
+
+
+  <script id="ionCart.html" type="text/ng-template">
+<ul class="list"> 
+
+     <li class="item item-toggle" collection-repeat="item in main.items">
+{{ item }}         
+         <label class="toggle">
+             <input type="checkbox">
+             <div class="track">
+                 <div class="handle">
+
+                 </div>
+             </div>
+         </label>
+     </li>
+</ul>
+    </script>
+
+
+
+  </div>
+
+  </ion-content>
+</body>
+</html>
